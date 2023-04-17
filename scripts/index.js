@@ -121,21 +121,30 @@
 // document.write(show_massage())
 // 7.	Створіть програму, яка знаходить і виводить на екран найбільше число з масиву чисел.
 
-// function show_highest_number(){
-//     let arr = ['1', '13', '12', '11', '15']
-//     return Math.max(arr);
-// }
-// document.write(show_highest_number())
+function show_highest_number(){
+    const arr = [1, 13, 12, 11, 15]
+    return (Math.max(...arr));
+}
+alert(show_highest_number())
 
 // 8.	Створіть функцію яка перевіряє валідність пароля і повтора пароля, повертає булевий результат.
 // let password = 0;
 
 // function valid_password_checker(){
 // let password = prompt('Введіть пароль')
+// let password_check = prompt('Повторіть пароль')
+// if(password != password_check){
+//     alert ("паролі не співпадають")
+// }
 // if(password == '651234'){
 //     return Boolean(true)
 // }
-
+// if(password_check == '651234'){
+//     return Boolean(true)
+// }
+// if(password != password_check){
+//     alert ("паролі не співпадають")
+// }
 // else{
 //     return Boolean(false)
 // }
@@ -151,9 +160,10 @@
 // let second_number = 0;
 
 // function show_massage(){
-//     let first_number = prompt('Введіть число')
-//     let second_number = prompt('Введіть число')
-//     return Math.abs(first_number + second_number)
+//     let first_number = 3;
+//     let second_number = 7;
+//     let sum_numbers = first_number + second_number
+//     return(Math.abs(first_number + second_number))
 // }
 // document.write(show_massage())
 
