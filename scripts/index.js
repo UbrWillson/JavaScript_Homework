@@ -121,11 +121,11 @@
 // document.write(show_massage())
 // 7.	Створіть програму, яка знаходить і виводить на екран найбільше число з масиву чисел.
 
-function show_highest_number(){
-    const arr = [1, 13, 12, 11, 15]
-    return (Math.max(...arr));
-}
-alert(show_highest_number())
+// function show_highest_number(){
+//     const arr = [1, 13, 12, 11, 15]
+//     return (Math.max(...arr));
+// }
+// alert(show_highest_number())
 
 // 8.	Створіть функцію яка перевіряє валідність пароля і повтора пароля, повертає булевий результат.
 // let password = 0;
