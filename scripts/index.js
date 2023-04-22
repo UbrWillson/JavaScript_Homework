@@ -108,3 +108,16 @@
 //   }
 //   console.log(uni(arr_num))
 //   3.	Написати функцію, яка приймає масив строк та повертає найдовшу строку з масиву. Використати цикл for для перебору елементів та методи масивів для порівняння довжин строк.
+let arr_sentences = ["roses are red", "car", "facility", "prehistorical"]
+
+function show_arr(){
+    
+for (let i = 0; i <arr_sentences.length; i++){
+if(arr_sentences[i]<arr_sentences.length){console.log(arr_sentences)}
+
+}
+
+
+
+}
+console.log(show_arr())
