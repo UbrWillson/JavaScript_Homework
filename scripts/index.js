@@ -135,3 +135,36 @@
 //   return new_arr;
 // }
 // console.log(numberstep())
+// 5.	Написати функцію, яка приймає масив строк та повертає масив, в якому кожна строка переведена в нижній регістр. Використати цикл for для перебору елементів та методи масивів для створення нового масиву.
+// const arr_caps_sentences = ["HIGHLIGHT", "PUNISHMENT", "INTERAPTION", "SIDEWAY"]
+
+// function show_verbswithout_caps(){
+// let new_arr_uncaps = [];
+// for (let i = 0; i < arr_caps_sentences.length; i++){
+//     new_arr_uncaps.push(arr_caps_sentences[i].toLowerCase())
+// }
+
+// return new_arr_uncaps;
+// }
+// console.log(show_verbswithout_caps())
+// 6.	Написати функцію, яка приймає масив чисел та повертає середнє значення цих чисел. Використати цикл for для обчислення суми та методи масивів для обчислення кількості елементів.
+// const arr_numbers = [2, 6, 21, 76]
+// function Sum_method(total, num){
+// return total + num
+// }
+
+// function arr_num_sum(){
+// let middle_num = 0;
+// for (let i = 0; i<arr_numbers.length; i++){
+// let sum = arr_numbers.reduce(Sum_method);
+// let arr_length = arr_numbers.length;
+// middle_num = sum / arr_length;
+
+// }
+// return middle_num;
+
+
+
+
+// }
+// console.log(arr_num_sum())
