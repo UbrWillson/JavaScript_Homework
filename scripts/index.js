@@ -108,16 +108,30 @@
 //   }
 //   console.log(uni(arr_num))
 //   3.	Написати функцію, яка приймає масив строк та повертає найдовшу строку з масиву. Використати цикл for для перебору елементів та методи масивів для порівняння довжин строк.
-let arr_sentences = ["roses are red", "car", "facility", "prehistorical"]
+// let arr_sentences = ["roses are red", "car", "facility", "prehistorical"]
 
-function show_arr(){
-    
-for (let i = 0; i <arr_sentences.length; i++){
-if(arr_sentences[i]<arr_sentences.length){console.log(arr_sentences)}
+// function thelongeststringfounder(){
+//     let thelongeststring = "";
+//     for(let i = 0; i<arr_sentences.length; i++){
+//         if(thelongeststring.length<arr_sentences[i].length){
+//              thelongeststring = arr_sentences[i];
+//         }
+       
+//     }
+//     return thelongeststring;
+// }
+// console.log(thelongeststringfounder())
+// 4.	Написати функцію, яка приймає масив чисел та повертає масив, в якому кожен елемент масиву піднесений до квадрата. Використати цикл for для перебору елементів та методи масивів для створення нового масиву.
 
-}
+// let arr_numbers = [2, 4, 6, 8]
 
-
-
-}
-console.log(show_arr())
+// function numberstep () {
+//     let new_arr = [];
+//     for (let i = 0; i<arr_numbers.length; i++){
+//        if(arr_numbers[i]**2 > new_arr){
+//         new_arr = arr_numbers[i] ** 2;
+//        } 
+//     }
+//   return new_arr;
+// }
+// console.log(numberstep())
