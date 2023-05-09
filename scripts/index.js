@@ -87,15 +87,57 @@
 //     SubTask2: “Створіть функцію, яка сортує товари у вашому електронному магазині за ціною від найвищої до найнижчої.” (Метод сортування array.sort())
 //     };
     
-let shops =[ {name:"SIlpo", adress:"metro_Tarasa_shevchenka", list_of_items: "sausage", price:200},
-{name:"ATB", adress:"shuliavska_street", list_of_items: "cabage", price:100},
-{name:"Novus", adress:"maidan_nezalezhnosti_street", list_of_items: "tomato", price:300}
-]
+// let shops = {
+//   name: "SIlpo",
+//   adress: "metro_Tarasa_shevchenka",
+//   sausage: 43,
+//   tomato: 55,
+//   potato: 77,
+//   cabage: 100,
+//   milk:3,
+//   meat:2312
+// };
+// function product_sorter() {
+//   let newarr = [];
+//   for (let key in shops) {
+//     if (typeof shops[key] === "number") {
+//       newarr.push(key);
+//     }
+//   }
+//   return newarr.sort((a, b) => shops[a] - shops[b]);
+  
+// }
+// console.log(product_sorter())
 
-function item_sorter(object){
-    for(let item in object){
-        object.sort(object.price)
-    }
-}
-item_sorter(shops)
-console.log(shops)
+
+// 5.	TASK => {
+//     SubTask1:  “Створіть об'єкт, який представляє відділення поштової служби. Включіть властивості, такі як адреса, час роботи та список посилок, які знаходяться у відділенні.” ,
+//     SubTask2: “Створіть функцію, яка перевіряє, чи є відділення поштової служби відкрите в поточний час.”
+//     };
+
+// let post_office = {
+//     adress:"metro_Tarasa_shevchenka",
+//     first_package:"smartphones",
+//     second_package:"potato",
+//     time_when_opened:8,
+//     time_when_closed:20
+// }
+// let how_much_time = prompt("Введіть поточний час(після годин, хвилини пишіть через крапку)")
+// function time_checker(){
+    
+//         if(how_much_time >= post_office.time_when_closed || how_much_time < post_office.time_when_opened){
+//                 alert("Зараз це поштове відділення закрито")
+//             }
+//         else{alert("Зараз це відділення відкрите")}
+    
+// }
+// console.log(time_checker())
+    
+
+
+
+
+
+
+
+
