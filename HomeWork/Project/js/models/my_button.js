@@ -6,6 +6,6 @@ class My_Button {
     }
 
     show(){
-        document.write()
+        document.write('<button>Save Progress</button>')
     }
 }
