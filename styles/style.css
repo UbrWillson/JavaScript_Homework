@@ -1,0 +1,22 @@
+.btn {
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid black;
+    background: url(../img/1129018.jpg);
+    color: aliceblue;
+    font-size: large;
+    font-weight: 700;
+    font: 'Times New Roman';
+    cursor: pointer;
+}
+.wrap {display: flex;
+justify-content: center;
+padding-top: 25%;
+
+}
+
+
+.btn:hover {
+    color: black;
+    background: url(../img/white.jfif)
+}
