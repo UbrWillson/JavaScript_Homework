@@ -68,18 +68,18 @@
 
 //5
 
-    document.getElementById("button").addEventListener('click', function funcBtn(){
-    console.log('btn is working');
-    dayjs.extend(dayOfYear);
+//     document.getElementById("button").addEventListener('click', function funcBtn(){
+//     console.log('btn is working');
+//     dayjs.extend(dayOfYear);
 
-    let today = dayjs().dayOfYear();
-        console.log(today)
-    let overallDays = 365
-    let summ = overallDays - today;
-    console.log(summ)
+//     let today = dayjs().dayOfYear();
+//         console.log(today)
+//     let overallDays = 365
+//     let summ = overallDays - today;
+//     console.log(summ)
     
 
-})
+// })
 
 
    
