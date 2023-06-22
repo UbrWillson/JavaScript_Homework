@@ -1,0 +1,144 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+background: #35393e;
+font: 0px 'Comic Sans MS';
+color: aliceblue;
+
+}
+
+body {
+    padding-top: 50px;
+    background-image: url(../img/cloud.avif), url(../img/cloud.avif);
+background-repeat: no-repeat;
+background-position: right bottom;
+}
+
+input {width: 100%;
+border: none;
+font-size: large;
+font-weight: bold;
+}
+
+input:focus {outline: none;}
+
+input,
+label,
+button {
+    display: block;
+}
+
+label,
+button {
+    padding: 15px;
+    border: 1px solid #bdc1c6;
+}
+
+button {
+    background: transparent;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.plans {
+    display: flex;
+}
+
+.plans__input {
+    width: 100%;
+}
+
+.plans__btn {
+    background: #35393e;
+    color: rgb(75, 75, 214);
+    white-space: nowrap;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 22px;
+    border: 3px solid rgb(75, 75, 214);
+    font-size: 15px;
+}
+
+.plans__btn:hover {background-color: rgb(75, 75, 214);
+color: rgb(114, 114, 226);
+transition: 1s;
+}
+
+.plans__list {
+    margin-top: 20px;
+    
+}
+
+h5 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.plans {
+   border-radius: 22px; 
+}
+.plans-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.yrList {
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+/* list */
+
+.todos-block {
+}
+.plans-list {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  padding: 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.todo-item:nth-child(odd) {
+  background: #35393e;
+  border: 1px solid silver;
+  border-radius: 22px;
+}
+.todo-item__index {
+  margin-right: 10px;
+}
+.todo-item__input {
+  padding: 0;
+  border: none;
+  margin-right: 10px;
+}
+.todo-item__input input {}
+.todo-item__text {
+  margin-right: auto;
+  font-weight: bold;
+}
+.todo-item__btns {}
+
+.action-btn {}
+.action-btn {
+  border: none;
+  padding: 10px;
+}
+.action-btn_del {
+  color: red;
+  font-size: 20px;
+}
+
+
