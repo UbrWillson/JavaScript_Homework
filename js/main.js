@@ -48,6 +48,16 @@ const
         `).join('');
 
         plansEL.innerHTML = plansEls;
+
+
+        // dell func
+      const deleteButtons = doc.getElementsByClassName('action-btn_del');
+      for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', function () {
+          console.log('Button is working');
+          this.closest('.todo-item').style.display = 'none';
+        });
+      }
     }
 
     function createPlansObj(text, id) {
@@ -59,14 +69,4 @@ const
       
         return plansObj;
       }
-
-      // dell func
-      const deleteButtons = doc.getElementsByClassName('action-btn_del');
-      for (let i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener('click', function () {
-          console.log('Button is working');
-          this.closest('.todo-item').style.display = 'none';
-        });
-      }
-    
 
