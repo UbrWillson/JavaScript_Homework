@@ -23,13 +23,22 @@
 
     <div class="plans-block">
         <ul class="plans-list">
-            
+            <li class="todo-item" data-id="${ plans.id }">
+                <span class="todo-item__index">1</span>
+                <label class="todo-item__input">
+                  <input type="checkbox" name="completed">
+                </label>
+                <p class="todo-item__text">todo</p>
+                <div class="todo-item__btns">
+                  <button class="action-btn action-btn_del">x</button>
+                </div>
+              </li>
         </ul>
     </div>
 
 
 </div>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main1.js"></script>
 </body>
 </html>
