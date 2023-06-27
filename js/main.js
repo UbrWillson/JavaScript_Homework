@@ -4,7 +4,8 @@ const
     forms = doc.querySelector('.plansForm'),
     formsEls = forms.elements,
     plansInput = forms.plansInput,
-    plansBtn = forms.plansBtn;
+    plansBtn = forms.plansBtn
+    actionBtnDel = document.getElementsByClassName('action-btn_del')
 
     const plansEL = doc.querySelector('.plans-list');
 
@@ -33,13 +34,13 @@ const
     };
 
     function renderPlans(plans) {
-        const plansEls = plans.map((plan, index) =>`
-        <li class="todo-item" data-id="${ plan.id }">
+        const plansEls = plans.map((plans, index) =>`
+        <li class="todo-item" data-id="${ plans.id }">
       <span class="todo-item__index">${ index + 1 }</span>
       <label class="todo-item__input">
         <input type="checkbox" name="completed">
       </label>
-      <p class="todo-item__text">${ plan.body }</p>
+      <p class="todo-item__text">${ plans.body }</p>
       <div class="todo-item__btns">
         <button class="action-btn action-btn_del">x</button>
       </div>
@@ -58,4 +59,14 @@ const
       
         return plansObj;
       }
+
+      // dell func
+      const deleteButtons = doc.getElementsByClassName('action-btn_del');
+      for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', function () {
+          console.log('Button is working');
+          this.closest('.todo-item').style.display = 'none';
+        });
+      }
+    
 

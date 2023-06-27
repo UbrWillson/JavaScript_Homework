@@ -128,10 +128,12 @@ h5 {
 .todo-item__text {
   margin-right: auto;
   font-weight: bold;
+  color: aliceblue;
+  background-color: aliceblue;
 }
 .todo-item__btns {}
 
-.action-btn {}
+
 .action-btn {
   border: none;
   padding: 10px;
@@ -139,6 +141,7 @@ h5 {
 .action-btn_del {
   color: red;
   font-size: 20px;
+  cursor: pointer;
 }
 
 
