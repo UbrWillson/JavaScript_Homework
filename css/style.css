@@ -3,7 +3,7 @@ padding: 0;
 box-sizing: border-box;
 text-decoration: none;
 background: #35393e;
-font: 0px 'Comic Sans MS';
+font: 16px 'Comic Sans MS';
 color: aliceblue;
 
 }
@@ -38,6 +38,11 @@ button {
 button {
     background: transparent;
 }
+.amanities-btns {
+  display: flex;
+padding-top: 5px;
+
+}
 
 .container {
     max-width: 600px;
@@ -64,10 +69,30 @@ button {
     font-size: 15px;
 }
 
+.plans__btn1, .plans__btn2 {
+  background: #35393e;
+  color: rgb(75, 75, 214);
+  white-space: nowrap;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 22px;
+  border: 3px solid rgb(75, 75, 214);
+  font-size: 12px;
+}
+
 .plans__btn:hover {background-color: rgb(75, 75, 214);
 color: rgb(114, 114, 226);
 transition: 1s;
 }
+.plans__btn1:hover {background-color: rgb(75, 75, 214);
+  color: rgb(114, 114, 226);
+  transition: 1s;
+  }
+  .plans__btn2:hover {background-color: rgb(75, 75, 214);
+    color: rgb(114, 114, 226);
+    transition: 1s;
+    }
 
 .plans__list {
     margin-top: 20px;
@@ -87,6 +112,8 @@ h5 {
     align-items: center;
     margin-bottom: 5px;
     padding: 5px;
+    border: 1px solid silver;
+    border-radius: 22px;
 }
 
 .yrList {
@@ -113,8 +140,8 @@ h5 {
 
 .todo-item:nth-child(odd) {
   background: #35393e;
-  border: 1px solid silver;
-  border-radius: 22px;
+ 
+  
 }
 .todo-item__index {
   margin-right: 10px;
@@ -129,7 +156,7 @@ h5 {
   margin-right: auto;
   font-weight: bold;
   color: aliceblue;
-  background-color: aliceblue;
+  
   
 }
 .todo-item__btns {}

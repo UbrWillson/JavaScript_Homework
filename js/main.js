@@ -3,11 +3,12 @@ const doc = document;
 const
     forms = doc.querySelector('.plansForm'),
     formsEls = forms.elements,
-    plansInput = forms.plansInput,
+    plansInput = doc.querySelector('.plansInput')
     plansBtn = forms.plansBtn,
-    actionBtnDel = document.getElementsByClassName('action-btn_del')
-    
-
+    actionBtnDel = document.getElementsByClassName('action-btn_del'),
+    chbox = doc.querySelector('input[type=checkbox]');
+    plans__btn1 = doc.querySelector('.plans__btn1')
+    plans__btn2 = doc.querySelector('.plans__btn2')
     const plansEL = document.querySelector('.plans-list');
 
     const plans = [
@@ -36,12 +37,13 @@ const
 
     function renderPlans(plans) {
         const plansEls = plans.map((plan, index) =>`
-        <li class="todo-item" data-id="${ plan.id }">
-      <span class="todo-item__index">${ index + 1 }</span>
+        
+        <li class="plans-item" data-id="${plan.id}">
+      <span class="todo-item__index">${index + 1}</span>
       <label class="todo-item__input">
-        <input type="checkbox" name="completed">
+        <input type="checkbox" name="completed" class="plans__input">
       </label>
-      <p class="todo-item__text">${ plan.body }</p>
+      <p class="todo-item__text">${plan.body}</p>
       <div class="todo-item__btns">
         <button class="action-btn action-btn_del">x</button>
       </div>
@@ -57,7 +59,7 @@ const
         deleteButtons[i].addEventListener('click', function () {
           console.log('Button is working');
           plans.pop();
-          let item = doc.querySelector('.todo-item')
+          let item = doc.querySelector('.plans-item')
           item.remove();
         });
       }
@@ -66,10 +68,21 @@ const
     function createPlansObj(text, id) {
         const plansObj = {
           id,
-          body: text,
-          completed: false
+          body:text,
+          completed:false
         }
       
         return plansObj;
       }
 
+
+      function checkCompletion(plans){
+        if(plans__input.checked){
+          console.log('1')
+        }
+      }
+    
+      
+     
+
+      
