@@ -11,7 +11,7 @@ const
     plans__btn2 = doc.querySelector('.plans__btn2')
     const plansEL = document.querySelector('.plans-list');
 
-    const plans = [
+    let plans = [
         {id:1, body:'plan 1', completed: false},
     ];
 
@@ -38,10 +38,10 @@ const
     function renderPlans(plans) {
         const plansEls = plans.map((plan, index) =>`
         
-        <li class="plans-item" data-id="${plan.id}">
+        <li class="plans-item" data-id="${plans.id}">
       <span class="todo-item__index">${index + 1}</span>
       <label class="todo-item__input">
-        <input type="checkbox" name="completed" class="plans__input">
+        <input type="checkbox" name="completed" class="" ${plan.completed ? 'checked' : ''}>
       </label>
       <p class="todo-item__text">${plan.body}</p>
       <div class="todo-item__btns">
@@ -51,6 +51,16 @@ const
         `).join('');
 
         plansEL.innerHTML = plansEls;
+
+
+        // for checkboxes
+        const checkboxes = doc.querySelectorAll('input[type="checkbox"]')
+        checkboxes.forEach((checkbox, index) => {
+          checkbox.addEventListener('change', function(){
+            plans[index].completed = this.checked;
+            console.log(plans)
+          })
+        })
 
 
         // dell func
@@ -76,11 +86,23 @@ const
       }
 
 
-      function checkCompletion(plans){
-        if(plans__input.checked){
-          console.log('1')
-        }
-      }
+      
+
+
+plans__btn1.onclick = function removeDone(){
+  console.log('btn for removing objects is working')
+  const filteredPlans = plans.filter((plans) => !plans.completed);
+  plans.length = 0;
+  plans.push(...filteredPlans)
+  renderPlans(plans);
+}
+
+
+plans__btn2.onclick = function firstlyUndone(){console.log('btn 2 is working');
+
+
+}
+
     
       
      
