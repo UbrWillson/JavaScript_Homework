@@ -1,0 +1,36 @@
+*{text-decoration: none;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+body{background-color: grey;
+width: 100%;
+height: 100vh;
+}
+header{background-color: rgb(44, 44, 44);
+padding: 10px 6px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+input{padding: 0 20px;}
+
+.red{color: red;}
+.green{color: green;}
+.blue{color: blue;}
+input{border: 2px solid black;
+border-radius: 12px;
+}
+.HeaderWrap{display: flex;
+
+}
+
+.HeaderWrap img{width: 80%;
+padding-left: 3px;
+cursor: pointer;
+}
+.inputDiv{padding-left: 50px;
+display: flex;
+justify-content: center;
+
+}
