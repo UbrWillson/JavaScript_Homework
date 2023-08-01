@@ -6,10 +6,10 @@ const
     plansInput = doc.querySelector('.plansInput')
     plansBtn = forms.plansBtn,
     actionBtnDel = document.getElementsByClassName('action-btn_del'),
-    chbox = doc.querySelector('input[type=checkbox]');
-    plans__btn1 = doc.querySelector('.plans__btn1')
-    plans__btn2 = doc.querySelector('.plans__btn2')
-    const plansEL = document.querySelector('.plans-list');
+    chbox = doc.querySelector('input[type=checkbox]'),
+    plans__btn1 = doc.querySelector('.plans__btn1'),
+    plans__btn2 = doc.querySelector('.plans__btn2'),
+    plansEL = document.querySelector('.plans-list');
 
     let plans = [
         {id:1, body:'plan 1', completed: false},
@@ -95,13 +95,18 @@ plans__btn1.onclick = function removeDone(){
   plans.length = 0;
   plans.push(...filteredPlans)
   renderPlans(plans);
-}
+};
 
 
 plans__btn2.onclick = function firstlyUndone(){console.log('btn 2 is working');
+const undonePlans = plans.filter((plan) => !plan.completed);
+const completedPlans = plans.filter((plan) => !plan.completed);
 
+plans = undonePlans.concat(completedPlans);
 
-}
+renderPlans(plans);
+
+};
 
     
       
