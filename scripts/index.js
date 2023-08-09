@@ -2,12 +2,12 @@
 const products = [
     { name: "Product 1", price: 10.99, image: "product1.jpg" },
     { name: "Product 2", price: 19.99, image: "product2.jpg" },
-    // Додайте інші товари
+    
   ];
   
   function createProductCard(product) {
     const card = document.createElement("div");
-    card.classList.add("product-card"); // Додайте стилі за потреби
+    card.classList.add("product-card"); 
   
     const image = document.createElement("img");
     image.src = product.image;
@@ -25,8 +25,8 @@ const products = [
     return card;
   }
   
-  // Отримання контейнера і додавання карток товарів
-  const productContainer = document.getElementById("product-container");
+  
+  const productContainer = document.querySelector("#product-container");
   
   products.forEach(product => {
     const card = createProductCard(product);
