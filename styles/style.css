@@ -3,6 +3,7 @@ text-decoration: none;
 margin: 0;
 padding: 0;
 
+
 }
 body{background-color: #e5e5e5;  }
 
@@ -16,12 +17,44 @@ body{background-color: #e5e5e5;  }
 
 
 
-header{background-color: #fca311; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; padding: 10px 750px;}
+header{background-color: #fca311; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; padding: 10px 750px; max-width: 1675;}
 header h1{color: #14213d;}
-.container-header{display: flex; flex-direction: row;}
+.container-header{ background-color: #fca311;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;padding: 10px 20px; display: flex;justify-content: space-between;align-items: center;}
+.container-nav{display: flex;justify-content: space-between;align-items: center;}
+.container-logncart{display: flex; gap: 10px; }
+#cart{background-color: transparent; border: 0px; cursor: pointer;}
+#login{background-color: transparent; border: 0px; cursor: pointer;}
 
-main{background-color: #fca311; color: #14213d; margin-top: 15px; border-radius: 12px; padding: 50px 450px; max-width: 1675px;}
+main{background-color: #fca311; color: #14213d; margin-top: 15px; border-radius: 12px; padding: 50px 200px; max-width: 1675px;}
 
-#product-container{display: flex; flex-direction: row; justify-content: center; text-align: center; }
+#product-container{display: flex; flex-direction: row; justify-content: center; text-align: center;  max-width: 1675px; flex-wrap: wrap; gap: 20px;}
 
 .product-img{width: 150px; height: 75px;}
+
+.product-card{background-color: #e5e5e5;
+border-radius: 13px;
+padding: 75px 30px;
+
+margin-right: 5px;
+}
+
+
+
+#category{background-color: #e5e5e5;
+color: #14213d;
+border-radius: 12px;
+}
+
+
+#price{background-color: #e5e5e5;
+    color: #14213d;
+    border-radius: 12px;}
+
+    .filters{color: #14213d;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 30px 0;
+    
+    }
+
+    .CartBtnAdd{background-color: #fca311; border-radius: 12px; border: 0; padding: 10px;}

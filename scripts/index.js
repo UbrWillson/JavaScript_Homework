@@ -12,6 +12,16 @@ const products = [
     
     
   ];
+
+  const categorySelect = document.querySelector("#category");
+const priceRange = document.querySelector("#price");
+const priceValue = document.querySelector("#priceValue");
+const productCont = document.querySelector("#product-container");
+
+  
+
+
+
   
   function createProductCard(product) {
     const card = document.createElement("div");
@@ -30,14 +40,46 @@ const products = [
     const price = document.createElement("p");
     price.textContent = `$${product.price.toFixed(2)}`;
     card.appendChild(price);
+
+
+    const addCartbtn = document.createElement("button");
+    addCartbtn.textContent = "ADD TO CART"
+    addCartbtn.classList.add("CartBtnAdd")
+    card.appendChild(addCartbtn);
   
     return card;
   }
   
   
-  const productContainer = document.querySelector("#product-container");
-  
-  products.forEach(product => {
-    const card = createProductCard(product);
-    productContainer.appendChild(card);
-  });
+  function updatePriceValue() {
+    priceValue.textContent = `$${priceRange.value}`;
+}
+
+function filterProducts() {
+    const selectedCategory = categorySelect.value;
+    const maxPrice = parseFloat(priceRange.value);
+
+    productCont.innerHTML = ""; 
+
+    products.forEach(product => {
+        if ((selectedCategory === "all" || product.name.toLowerCase().includes(selectedCategory)) &&
+            product.price <= maxPrice) {
+            const card = createProductCard(product);
+            
+            const addCartBtn = card.querySelector(".CartBtnAdd");
+            addCartBtn.addEventListener("click", () => {
+                console.log("Added to cart:", product.name);
+            });
+
+            productCont.appendChild(card); 
+        }
+    });
+}
+
+// select btns
+categorySelect.addEventListener("change", filterProducts);
+priceRange.addEventListener("input", updatePriceValue);
+priceRange.addEventListener("change", filterProducts);
+
+updatePriceValue(); 
+filterProducts();
