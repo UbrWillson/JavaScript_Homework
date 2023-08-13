@@ -13,10 +13,13 @@ const products = [
     
   ];
 
+  const cart = [];
+
   const categorySelect = document.querySelector("#category");
 const priceRange = document.querySelector("#price");
 const priceValue = document.querySelector("#priceValue");
 const productCont = document.querySelector("#product-container");
+const btnCart = document.querySelector(".CartBtnAdd")
 
   
 
@@ -49,6 +52,8 @@ const productCont = document.querySelector("#product-container");
   
     return card;
   }
+
+  
   
   
   function updatePriceValue() {
@@ -83,3 +88,6 @@ priceRange.addEventListener("change", filterProducts);
 
 updatePriceValue(); 
 filterProducts();
+
+//cart
+
