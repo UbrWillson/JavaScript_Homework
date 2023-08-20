@@ -12,8 +12,9 @@ const products = [
     
     
   ];
+  let cart = [];
 
-  const cart = [];
+  
 
   const categorySelect = document.querySelector("#category");
 const priceRange = document.querySelector("#price");
@@ -22,7 +23,14 @@ const productCont = document.querySelector("#product-container");
 const btnCart = document.querySelector(".CartBtnAdd");
 const CartOpener = document.querySelector("#cart");
 const CartWindow = document.querySelector("#cart-window");
-const CartCloser = document.querySelector(".btn-cart-closer")
+const CartCloser = document.querySelector(".btn-cart-closer");
+const CartItems = document.querySelector(".cart-items");
+const LoginWindow = document.querySelector(".login-window");
+const LoginCloser = document.querySelector(".btn-login-closer");
+const LoginOpener = document.querySelector("#login");
+let trueUsername = admin;
+let truePassword = admin;
+
 
 
 
@@ -45,17 +53,29 @@ const CartCloser = document.querySelector(".btn-cart-closer")
     price.textContent = `$${product.price.toFixed(2)}`;
     card.appendChild(price);
 
-
     const addCartbtn = document.createElement("button");
-    addCartbtn.textContent = "ADD TO CART"
-    addCartbtn.classList.add("CartBtnAdd")
+    addCartbtn.textContent = "ADD TO CART";
+    addCartbtn.classList.add("CartBtnAdd");
+    addCartbtn.addEventListener("click", () => {
+        cart.push(product);
+        updateCart(); 
+    });
     card.appendChild(addCartbtn);
-  
+    
+
     return card;
   }
 
   
   
+function updateCart() {
+  CartItems.innerHTML = "";
+    cart.forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item.name;
+        CartItems.appendChild(listItem);
+    });
+}
   
   function updatePriceValue() {
     priceValue.textContent = `$${priceRange.value}`;
@@ -91,9 +111,11 @@ updatePriceValue();
 filterProducts();
 
 //cart
-CartOpener.onclick = function openCart(){
- CartWindow.style.display = "block"
+CartOpener.onclick = function openCart() {
+  CartWindow.style.display = "block";
+    updateCart();
 }
+
 
 CartCloser.onclick = function closeCart(){
   CartWindow.style.display = "none"
@@ -102,8 +124,15 @@ CartCloser.onclick = function closeCart(){
 
 
 
-//login
 
+//login
+LoginOpener.onclick = function openLogin(){
+  LoginWindow.style.display = "block"
+ }
+ 
+ LoginCloser.onclick = function closeLogin(){
+  LoginWindow.style.display = "none"
+ }
 
 
 

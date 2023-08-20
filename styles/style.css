@@ -60,9 +60,19 @@ border-radius: 12px;
     .CartBtnAdd{background-color: #fca311; border-radius: 12px; border: 0; padding: 10px;}
     .CartBtnAdd:hover{background-color: #14213d; color: #e5e5e5; transition: 0.5s;}
 
-    #cart-window{position: absolute; padding: 10px; background-color: #14213d; color: #e5e5e5;  top: 40%; display: none; border-radius: 12px;}
+    #cart-window{position: absolute; padding: 10px 40px; background-color: #14213d; color: #e5e5e5;  top: 40%; display: none; border-radius: 12px;}
 
     .btn-cart-closer{font-size: large; background-color: transparent; border: 0; cursor: pointer; font-weight: 800; color: #e5e5e5;}
 
     .cart_wrap{display: flex;}
     .cart_wrap button{padding-left: 100px;}
+
+    .login-window{position: absolute; padding: 35px; background-color: #14213d; color: #e5e5e5; top: 40%; display: none; border-radius: 12px; text-transform: uppercase;
+    }
+    .btn-login-closer{font-size: large; background-color: transparent; border: 0; cursor: pointer; font-weight: 800; color: #e5e5e5;}
+    .submit{ color: #e5e5e5;  background-color: #fca311; border: 0px; border-radius: 12px; padding: 10px;}
+    .submit:hover{scale: 1.2; transition: 0.5s;}
+    .wrap-login{display: flex; align-content: center; flex-direction: column;}
+    .wrap-login input{border-radius: 12px; border: 0px; padding: 3px;}
+    .wrap-closer{display: flex; flex-direction: row-reverse; justify-content: space-between;}
+    #cart{}
