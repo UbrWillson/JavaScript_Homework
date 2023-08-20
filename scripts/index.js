@@ -19,9 +19,10 @@ const products = [
 const priceRange = document.querySelector("#price");
 const priceValue = document.querySelector("#priceValue");
 const productCont = document.querySelector("#product-container");
-const btnCart = document.querySelector(".CartBtnAdd")
-
-  
+const btnCart = document.querySelector(".CartBtnAdd");
+const CartOpener = document.querySelector("#cart");
+const CartWindow = document.querySelector("#cart-window");
+const CartCloser = document.querySelector(".btn-cart-closer")
 
 
 
@@ -90,4 +91,23 @@ updatePriceValue();
 filterProducts();
 
 //cart
+CartOpener.onclick = function openCart(){
+ CartWindow.style.display = "block"
+}
+
+CartCloser.onclick = function closeCart(){
+  CartWindow.style.display = "none"
+}
+
+
+
+
+//login
+
+
+
+
+
+
+
 

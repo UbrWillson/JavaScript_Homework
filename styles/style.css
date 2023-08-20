@@ -60,4 +60,9 @@ border-radius: 12px;
     .CartBtnAdd{background-color: #fca311; border-radius: 12px; border: 0; padding: 10px;}
     .CartBtnAdd:hover{background-color: #14213d; color: #e5e5e5; transition: 0.5s;}
 
-    #cart-window{position: absolute; padding: 10px; background-color: #e5e5e5;  top: 50%;}
+    #cart-window{position: absolute; padding: 10px; background-color: #14213d; color: #e5e5e5;  top: 40%; display: none; border-radius: 12px;}
+
+    .btn-cart-closer{font-size: large; background-color: transparent; border: 0; cursor: pointer; font-weight: 800; color: #e5e5e5;}
+
+    .cart_wrap{display: flex;}
+    .cart_wrap button{padding-left: 100px;}
