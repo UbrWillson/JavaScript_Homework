@@ -28,8 +28,12 @@ const CartItems = document.querySelector(".cart-items");
 const LoginWindow = document.querySelector(".login-window");
 const LoginCloser = document.querySelector(".btn-login-closer");
 const LoginOpener = document.querySelector("#login");
-let trueUsername = admin;
-let truePassword = admin;
+const usernameInpt = document.querySelector(".username");
+const passwordInpt = document.querySelector(".password");
+const submitBtn = document.querySelector(".submit");
+let trueUsername = "admin";
+let truePassword = "admin";
+let RegistrationValue = false;
 
 
 
@@ -133,6 +137,17 @@ LoginOpener.onclick = function openLogin(){
  LoginCloser.onclick = function closeLogin(){
   LoginWindow.style.display = "none"
  }
+
+  
+
+  submitBtn.onclick = function login(){
+    if(usernameInpt.value === trueUsername && passwordInpt.value === truePassword){ RegistrationValue = true;}
+    else{alert("your password or username is incorrect!")}
+    
+  }
+
+
+  if(RegistrationValue === true){CartOpener.style.display = "block"}
 
 
 
