@@ -31,6 +31,8 @@ const LoginOpener = document.querySelector("#login");
 const usernameInpt = document.querySelector(".username");
 const passwordInpt = document.querySelector(".password");
 const submitBtn = document.querySelector(".submit");
+const LogOutBtn = document.querySelector("#logout");
+const addproductbtn = document.querySelector(".add_product_btn")
 let trueUsername = "admin";
 let truePassword = "admin";
 let RegistrationValue = false;
@@ -141,13 +143,47 @@ LoginOpener.onclick = function openLogin(){
   
 
   submitBtn.onclick = function login(){
-    if(usernameInpt.value === trueUsername && passwordInpt.value === truePassword){ RegistrationValue = true;}
-    else{alert("your password or username is incorrect!")}
+    if(usernameInpt.value === trueUsername && passwordInpt.value === truePassword){ 
+      console.log(RegistrationValue);
+      RegistrationValue = true;
+      console.log(RegistrationValue)
+      if(RegistrationValue === true){
+      CartOpener.style.display = "block"; 
+      LogOutBtn.style.display = "block";
+
+
+      LoginWindow.style.display = "none";
+      LoginOpener.style.display = "none";
+      usernameInpt.value = "";
+      passwordInpt.value = "";
+
+
+    }
+      }
+    else{alert("your password or username is incorrect!");
+    usernameInpt.value = "";
+    passwordInpt.value = "";
+
+  }
     
   }
 
+  LogOutBtn.onclick = function logOutProcess(){
+    CartOpener.style.display = "none"; 
+      LogOutBtn.style.display = "none";
 
-  if(RegistrationValue === true){CartOpener.style.display = "block"}
+
+      
+      LoginOpener.style.display = "block";
+  }
+
+
+  // add product btn
+
+
+
+
+  
 
 
 
