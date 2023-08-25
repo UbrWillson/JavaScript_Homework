@@ -1,5 +1,5 @@
 
-const products = [
+let products = [
     { name: "Product 1", price: 10.99, image: "/img/laptop.jpg" },
     { name: "Product 2", price: 19.99, image: "/img/laptop2.jpg" },
     { name: "Product 3", price: 102.99, image: "/img/laptop3.jpg" },
@@ -8,11 +8,12 @@ const products = [
     { name: "Product 6", price: 14210.99, image: "/img/phone3.jpg" },
     { name: "Product 7", price: 16450.99, image: "/img/pc1.jpg" },
     { name: "Product 8", price: 109.99, image: "/img/pc2.jpg" },
-    { name: "Product 9", price: 1097.99, image: "/img/pc3.jpg" }
+    { name: "Product 9", price: 1097.99, image: "/img/pc3.jpg" },
     
     
   ];
   let cart = [];
+  
 
   
 
@@ -32,7 +33,16 @@ const usernameInpt = document.querySelector(".username");
 const passwordInpt = document.querySelector(".password");
 const submitBtn = document.querySelector(".submit");
 const LogOutBtn = document.querySelector("#logout");
-const addproductbtn = document.querySelector(".add_product_btn")
+const addproductbtn = document.querySelector(".add_product_btn");
+const creatorWindow = document.querySelector(".creator-window");
+const creatorCloser = document.querySelector(".btn-creator-closer");
+const CreatorOpener = document.querySelector(".add_product_btn");
+const NameForProduct = document.querySelector(".Name_creator");
+const PriceForProduct = document.querySelector(".price_creator");
+const ImageForProduct = document.querySelector(".img_creator");
+const submitCreation = document.querySelector(".create-prdct")
+
+
 let trueUsername = "admin";
 let truePassword = "admin";
 let RegistrationValue = false;
@@ -67,6 +77,16 @@ let RegistrationValue = false;
         updateCart(); 
     });
     card.appendChild(addCartbtn);
+    
+    submitCreation.onclick = function productCreation(){
+    
+      console.log(NameForProduct.value)
+      console.log(PriceForProduct.value)
+      console.log(ImageForProduct.value)
+      products.push({name:NameForProduct.value,price:PriceForProduct.value,image:ImageForProduct.value});
+      console.log(products)
+      return products;
+     }
     
 
     return card;
@@ -150,7 +170,7 @@ LoginOpener.onclick = function openLogin(){
       if(RegistrationValue === true){
       CartOpener.style.display = "block"; 
       LogOutBtn.style.display = "block";
-
+        CreatorOpener.style.display = "block";
 
       LoginWindow.style.display = "none";
       LoginOpener.style.display = "none";
@@ -179,6 +199,16 @@ LoginOpener.onclick = function openLogin(){
 
 
   // add product btn
+  CreatorOpener.onclick = function openCreation(){
+    creatorWindow.style.display = "block"
+   }
+   
+   creatorCloser.onclick = function closeCreation(){
+    creatorWindow.style.display = "none"
+   }
+
+
+   
 
 
 
