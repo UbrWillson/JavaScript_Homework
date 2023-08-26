@@ -3,7 +3,7 @@ let products = [
     { name: "Product 1", price: 10.99, image: "/img/laptop.jpg" },
     { name: "Product 2", price: 19.99, image: "/img/laptop2.jpg" },
     { name: "Product 3", price: 102.99, image: "/img/laptop3.jpg" },
-    { name: "Product 4", price: 120.99, image: "/img/phone1.jpg" },
+    { name: "Product 4", price: 1000, image: "/img/phone1.jpg" },
     { name: "Product 5", price: 15130.99, image: "/img/phone2.jpg" },
     { name: "Product 6", price: 14210.99, image: "/img/phone3.jpg" },
     { name: "Product 7", price: 16450.99, image: "/img/pc1.jpg" },
@@ -74,23 +74,41 @@ let RegistrationValue = false;
     addCartbtn.classList.add("CartBtnAdd");
     addCartbtn.addEventListener("click", () => {
         cart.push(product);
-        updateCart(); 
+        updateCart();
     });
     card.appendChild(addCartbtn);
     
-    submitCreation.onclick = function productCreation(){
-    
-      console.log(NameForProduct.value)
-      console.log(PriceForProduct.value)
-      console.log(ImageForProduct.value)
-      products.push({name:NameForProduct.value,price:PriceForProduct.value,image:ImageForProduct.value});
-      console.log(products)
-      return products;
-     }
-    
+     
+    console.log("createProductCard function called");
 
-    return card;
+  submitCreation.onclick = productCreation;
+
+  return card;
   }
+  function productCreation(event) {
+    event.preventDefault(); 
+  
+    console.log("Submit button clicked");
+    console.log(NameForProduct.value);
+    console.log(PriceForProduct.value);
+    console.log(ImageForProduct.value);
+    products.push({
+      name: NameForProduct.value,
+      price: parseFloat(PriceForProduct.value),
+      image: ImageForProduct.value,
+    });
+    console.log(products);
+  
+    NameForProduct.value = "";
+    PriceForProduct.value = "";
+    ImageForProduct.value = "";
+  
+    filterProducts();
+  
+    return false;
+  }
+
+ 
 
   
   
@@ -114,27 +132,24 @@ function filterProducts() {
     productCont.innerHTML = ""; 
 
     products.forEach(product => {
-        if ((selectedCategory === "all" || product.name.toLowerCase().includes(selectedCategory)) &&
-            product.price <= maxPrice) {
-            const card = createProductCard(product);
-            
-            const addCartBtn = card.querySelector(".CartBtnAdd");
-            addCartBtn.addEventListener("click", () => {
-                console.log("Added to cart:", product.name);
-            });
-
-            productCont.appendChild(card); 
-        }
-    });
+      if ((selectedCategory === "all" || product.name.toLowerCase().includes(selectedCategory)) &&
+          product.price <= maxPrice) {
+          const card = createProductCard(product);
+          productCont.appendChild(card);
+      }
+  });
 }
 
 // select btns
-categorySelect.addEventListener("change", filterProducts);
-priceRange.addEventListener("input", updatePriceValue);
-priceRange.addEventListener("change", filterProducts);
+document.addEventListener("DOMContentLoaded", function () {
+  categorySelect.addEventListener("change", filterProducts);
+  priceRange.addEventListener("input", updatePriceValue);
+  priceRange.addEventListener("change", filterProducts);
+  submitCreation.addEventListener("click", productCreation);
 
-updatePriceValue(); 
-filterProducts();
+  updatePriceValue();
+  filterProducts();
+});
 
 //cart
 CartOpener.onclick = function openCart() {
@@ -170,10 +185,11 @@ LoginOpener.onclick = function openLogin(){
       if(RegistrationValue === true){
       CartOpener.style.display = "block"; 
       LogOutBtn.style.display = "block";
-        CreatorOpener.style.display = "block";
+      CreatorOpener.style.display = "block";
 
       LoginWindow.style.display = "none";
       LoginOpener.style.display = "none";
+
       usernameInpt.value = "";
       passwordInpt.value = "";
 
@@ -191,7 +207,7 @@ LoginOpener.onclick = function openLogin(){
   LogOutBtn.onclick = function logOutProcess(){
     CartOpener.style.display = "none"; 
       LogOutBtn.style.display = "none";
-
+      CreatorOpener.style.display = "none";
 
       
       LoginOpener.style.display = "block";
